@@ -138,6 +138,10 @@ def game_loop(isdebug):
         valid_moves = get_moves(player)
         print("You're currently in room {}".format(player)) #fill with location 
         print("You can move {}".format(",".join(valid_moves))) # fill with available moves
+        if isdebug == "debug":
+            print("MODE: {}".format(isdebug))
+            print("Door : #")
+            print("Monster : @")
         print("Enter QUIT to quit")
         move = input(">").upper()
         if move == "QUIT":
